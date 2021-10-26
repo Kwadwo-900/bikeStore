@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity} from 'react-native';
 import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function Login() {
     return (
@@ -31,6 +32,24 @@ export default function Login() {
  <TextInput 
  style={{ paddingHorizontal: 60, borderWidth : 0.5, padding:10,borderRadius:10, }} placeholder="password"/>
 
+
+ <TouchableOpacity 
+    style={{
+        padding: 15,
+        paddingHorizontal: 80,
+        marginTop: 10,
+        alignItems: "center",
+        borderRadius: 10,
+        flexDirection: "row",
+        backgroundColor: "white",
+      }}
+ >
+     <FontAwesome name="google" size={24} color="black" />
+     <Text style={{ paddingLeft: 10, color: "black" }}>Continue with google</Text>
+      
+     
+ </TouchableOpacity>
+
 <TouchableOpacity
        /* onPress={() => {
           navigation.navigate("Home");
@@ -47,7 +66,7 @@ export default function Login() {
         }}
       >
         <AntDesign name="apple1" size={24} color="white" />
-        <Text style={{ paddingLeft: 10, color: "white" }}>Login with AppleIDs</Text>
+        <Text style={{ paddingLeft: 10, color: "white" }}>Login with AppleID</Text>
       </TouchableOpacity>
 
 
