@@ -6,7 +6,7 @@ import { FontAwesome } from '@expo/vector-icons';
 export default function Login() {
     return (
       <View style={{
-        backgroundColor: "#f57009",
+        backgroundColor: "#dfddfd",
         flex: 1,
         paddingHorizontal: 20,
         justifyContent: "center",
@@ -32,17 +32,18 @@ export default function Login() {
  <TextInput 
  style={{ paddingHorizontal: 60, borderWidth : 0.5, padding:10,borderRadius:10, }} placeholder="password"/>
 
+ <TouchableOpacity onPress={() => {
+      navigation.navigate("Home");
+    }}
+    
+   style={{backgroundColor:"#13b075", border}}>
+ 
+   <Text style={{padding:10,color:"black"}}>Login</Text>
+ </TouchableOpacity>
+
 
  <TouchableOpacity 
-    style={{
-        padding: 15,
-        paddingHorizontal: 80,
-        marginTop: 10,
-        alignItems: "center",
-        borderRadius: 10,
-        flexDirection: "row",
-        backgroundColor: "white",
-      }}
+    style={{padding: 15, paddingHorizontal: 80, marginTop: 10,alignItems: "center",borderRadius: 10,flexDirection: "row",}}
  >
      <FontAwesome name="google" size={24} color="black" />
      <Text style={{ paddingLeft: 10, color: "black" }}>Continue with google</Text>
@@ -51,19 +52,9 @@ export default function Login() {
  </TouchableOpacity>
 
 <TouchableOpacity
-       /* onPress={() => {
-          navigation.navigate("Home");
-        }}
-        */
-        style={{
-          padding: 15,
-          paddingHorizontal: 80,
-          marginTop: 10,
-          alignItems: "center",
-          borderRadius: 10,
-          flexDirection: "row",
-          backgroundColor: "black",
-        }}
+        
+      
+style={edits.container }
       >
         <AntDesign name="apple1" size={24} color="white" />
         <Text style={{ paddingLeft: 10, color: "white" }}>Login with AppleID</Text>
@@ -73,5 +64,11 @@ export default function Login() {
       </View>
     );
   }
+
+  const edits = StyleSheet.create({
+   container:{ padding: 15, paddingHorizontal: 80, marginTop: 10,alignItems: "center",borderRadius: 10,flexDirection: "row",}
+ 
+
+  })
 
   
