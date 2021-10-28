@@ -3,7 +3,7 @@ import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity} from 'react-n
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function Login() {
+export default function Login({navigation}) {
     return (
       <View style={{
         backgroundColor: "#dfddfd",
@@ -19,6 +19,7 @@ export default function Login() {
           marginBottom: 60,
           width: 200,
           height: 200,
+          boxShadow:"1px 2px 3px #888888"
         }}
         source={{
           uri: "https://image.shutterstock.com/image-photo/vintage-bicycle-on-roadside-black-600w-308760134.jpg",
@@ -36,39 +37,16 @@ export default function Login() {
       navigation.navigate("Home");
     }}
     
-   style={{backgroundColor:"#13b075", border}}>
+   style={{backgroundColor:"#13b075", border:1, padding:10,marginTop:10,paddingHorizontal:60,
+      borderRadius:10, boxShadow:"1px 2px 3px #888888"
+   ,}}>
  
    <Text style={{padding:10,color:"black"}}>Login</Text>
  </TouchableOpacity>
-
-
- <TouchableOpacity 
-    style={{padding: 15, paddingHorizontal: 80, marginTop: 10,alignItems: "center",borderRadius: 10,flexDirection: "row",}}
- >
-     <FontAwesome name="google" size={24} color="black" />
-     <Text style={{ paddingLeft: 10, color: "black" }}>Continue with google</Text>
-      
-     
- </TouchableOpacity>
-
-<TouchableOpacity
-        
-      
-style={edits.container }
-      >
-        <AntDesign name="apple1" size={24} color="white" />
-        <Text style={{ paddingLeft: 10, color: "white" }}>Login with AppleID</Text>
-      </TouchableOpacity>
-
-
-      </View>
+ </View>
     );
   }
 
-  const edits = StyleSheet.create({
-   container:{ padding: 15, paddingHorizontal: 80, marginTop: 10,alignItems: "center",borderRadius: 10,flexDirection: "row",}
- 
-
-  })
+  
 
   
