@@ -8,14 +8,9 @@ export default function Land({navigation}){
     return(
         <View style={styles.container}>
            
-           <LinearGradient
-        colors={['#6c5ce7', '#ffeaa7']}
-        start={{ x: 0.0, y: 0.25 }}
-        end={{ x: 0.5, y: 1.0 }}
-        locations={[0, 0.5, 0.6]}
-        style={styles.box}>
-        <Text style={{fontFamily:"Audiowide",fontSize:30}}>WELCOME TO THE VINTAGE BIKE SHOP</Text>
-        </LinearGradient>
+           
+        <Text style={styles.text}>WELCOME TO THE VINTAGE BIKE SHOP</Text>
+        
             
             
             <Image 
@@ -46,16 +41,17 @@ export default function Land({navigation}){
 }
 
     const styles = StyleSheet.create({
-       container:{backgroundColor:"#fff",
+       container:{
        alignItems:"center",
         justifyContent:"center",
          padding:10, 
          flex:1},
 
-         box: {
-            width: '100%',
-            height: 50,
-        flex:1,
-        alignItems:"center",
-    justifyContent:"center"}
+         text:{
+             fontWeight:"bold",
+             fontSize: 20,
+             textAlign:"auto",
+             fontFamily:"cursive",
+         }
+        
     });
