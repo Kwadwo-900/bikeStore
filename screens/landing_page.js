@@ -1,57 +1,78 @@
 import React from 'react';
-import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity} from 'react-native';
-import {LinearGradient} from 'expo-linear-gradient';
+import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity,ImageBackground} from 'react-native';
 
 
-export default function Land({navigation}){
+export default function landing_page({navigation}){
 
     return(
+        <ImageBackground style={styles.background} source={{uri:"https://images.unsplash.com/photo-1495570042983-249df576ad3c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmludGFnZSUyMGJpY3ljbGVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}}>
         <View style={styles.container}>
-           
-           
         <Text style={styles.text}>WELCOME TO THE VINTAGE BIKE SHOP</Text>
-        
-            
-            
-            <Image 
-            style={{
-         
-          borderRadius: 20,
-          marginTop: 60,
-          width: 200,
-          height: 200,
-          boxShadow:"1px 2px 3px #888888"
-            }}
-            
-            source={{uri:"https://image.shutterstock.com/image-photo/red-brick-house-walls-decorated-600w-1428952517.jpg"}}/>
-            <TouchableOpacity 
-
+           
+            <TouchableOpacity
                 onPress = {()=>{
                     navigation.navigate("Login")
                 }}
 
-                style={{backgroundColor:"#13b075", border:1, padding:10,marginTop:100,paddingHorizontal:10,
-                borderRadius:5, boxShadow:"1px 2px 3px #888888"
-                ,}}>
-                <Text style={{padding:5,color:"black",fontSize:'20px'}}>CONTINUE</Text>
+                style={styles.button}>
+                <Text style={{padding:5,color:"black",fontSize:'20px'}}>LOGIN</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                onPress = {()=>{
+                    navigation.navigate("Login")
+                }}
+
+                style={styles.button1}>
+                <Text style={{padding:5,color:"black",fontSize:'20px'}}>SIGN UP</Text>
             </TouchableOpacity>
         </View>
+        </ImageBackground>
 
     );
 }
 
     const styles = StyleSheet.create({
        container:{
-       alignItems:"center",
-        justifyContent:"center",
-         padding:10, 
+        justifyContent:"flex-end",
+         alignItems:"center",
          flex:1},
 
          text:{
              fontWeight:"bold",
-             fontSize: 20,
-             textAlign:"auto",
+             fontSize: 40,
              fontFamily:"cursive",
+             color:"white",
+             position:"absolute",
+             top:80,
+             textAlign:"auto",
+             
+         },
+         image:{
+            borderRadius: 20,
+            width: 200,
+            height: 200,
+            //boxShadow:"1px 2px 3px #888888",
+         },
+         button:{
+            backgroundColor:"tomato",
+              textAlign:"center",
+              borderRadius:5,
+              width:'100%',
+              height:70,
+
+         },
+
+         button1:{
+            backgroundColor:"#13b075",
+              textAlign:"center",
+              borderRadius:5,
+              width:'100%',
+              height:70,
+         },    
+
+         background:{
+             flex:1,
+             
          }
         
     });
