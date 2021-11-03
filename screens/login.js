@@ -27,7 +27,7 @@ export default function Login({navigation}) {
     }}
     
    style={{backgroundColor:"#13b075", border:1, padding:5,marginTop:3,paddingHorizontal:40,
-      borderRadius:5, boxShadow:"1px 2px 3px #888888"
+      borderRadius:56, boxShadow:"1px 2px 3px #888888"
    ,}}>
  
    <Text style={{padding:10,color:"black"}}>Login</Text>
