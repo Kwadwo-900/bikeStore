@@ -11,5 +11,9 @@ const styles = StyleSheet.create({
     main:{
         flex:1,
 
+
     }
 })
+
+
+<Stack.Screen name="Sign_up" component={sign_up} options={{title:"SIGN UP"}}/>

@@ -6,9 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from "./screens/login.js";
 import Home from "./screens/home";
 import landing_page from "./screens/landing_page";
-import sign_up from "./screens/sign_up_page";
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
+//import sign_up from "./screens/sign_up_page";
+
 
 
 
@@ -22,23 +21,24 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name = "landing_page" component={landing_page} options={{title:"WELCOME"}}/>
           <Stack.Screen name="Login" component={Login} options={{title:"LOGIN"}}/>
-          <Stack.Screen name="Sign_up" component={sign_up} options={{title:"SIGN UP"}}/>
+          
           <Stack.Screen name="Home" component={Home} 
           options={{title:"SELECT BIKE",
         headerLeft:({onPress}) => {
           <TouchableOpacity 
-          style={{marginLeft: SIZE.padding}} onPress={onPress}>
-            <Ionicons name="md-menu-sharp" size={24} color="black" />
-            //<Image source={{uri:""}}/>
-
+           onPress={onPress}>
+            <Image 
+            source={require('./assets/icons/menu.png')}
+            style={{width:25,
+              height:25,resizeMode:'contain'}}/>
           </TouchableOpacity>
         },
         headerRight:() => {
           <TouchableOpacity 
-          style={{marginRight: SIZE.padding}}
+          style={{marginRight:1, padding:5}}
           onPress={()=> console.log("Header right Pressed")}
           >
-            <AntDesign name="search1" size={24} color="black" />
+            
 
           </TouchableOpacity>
         }
