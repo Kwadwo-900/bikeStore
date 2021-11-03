@@ -15,7 +15,7 @@ export default function landing_page({navigation}){
                 }}
 
                 style={styles.button}>
-                <Text style={{padding:5,color:"black",fontSize:'20px'}}>LOGIN</Text>
+                <Text style={{padding:5,color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>LOGIN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress = {()=>{
@@ -23,7 +23,7 @@ export default function landing_page({navigation}){
                 }}
 
                 style={styles.button1}>
-                <Text style={{padding:5,color:"black",fontSize:'20px'}}>SIGN UP</Text>
+                <Text style={{padding:5,color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>SIGN UP</Text>
             </TouchableOpacity>
         </View>
         </ImageBackground>
