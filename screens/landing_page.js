@@ -19,7 +19,7 @@ export default function landing_page({navigation}){
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress = {()=>{
-                    navigation.navigate("Login")
+                    navigation.navigate("Sign_up")
                 }}
 
                 style={styles.button1}>
@@ -56,7 +56,6 @@ export default function landing_page({navigation}){
          button:{
             backgroundColor:"tomato",
               textAlign:"center",
-              borderRadius:5,
               width:'100%',
               height:70,
 
@@ -65,7 +64,6 @@ export default function landing_page({navigation}){
          button1:{
             backgroundColor:"#13b075",
               textAlign:"center",
-              borderRadius:5,
               width:'100%',
               height:70,
          },    
