@@ -23,26 +23,8 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} options={{title:"LOGIN"}}/>
           <Stack.Screen name="Sign_up" component={sign_up} options={{title:"SIGN UP"}}/>
           <Stack.Screen name="Home" component={Home} 
-          options={{title:"SELECT BIKE",
-        headerLeft:({onPress}) => {
-          <TouchableOpacity 
-           onPress={onPress}>
-            <Image 
-            source={require('./assets/icons/menu.png')}
-            style={{width:25,
-              height:25,resizeMode:'contain'}}/>
-          </TouchableOpacity>
-        },
-        headerRight:() => {
-          <TouchableOpacity 
-          style={{marginRight:1, padding:5}}
-          onPress={()=> console.log("Header right Pressed")}
-          >
-            
-
-          </TouchableOpacity>
-        }
-
+          options={{title:"SELECT BIKE"
+        
 
         }} />
         </Stack.Navigator>

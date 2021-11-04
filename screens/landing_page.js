@@ -8,14 +8,14 @@ export default function landing_page({navigation}){
         <ImageBackground style={styles.background} source={{uri:"https://images.unsplash.com/photo-1495570042983-249df576ad3c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmludGFnZSUyMGJpY3ljbGVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}}>
         <View style={styles.container}>
         <Text style={styles.text}>WELCOME TO THE VINTAGE BIKE SHOP</Text>
-           
+           <View style={{flexDirection:'column'}}>
             <TouchableOpacity
                 onPress = {()=>{
                     navigation.navigate("Login")
                 }}
 
                 style={styles.button}>
-                <Text style={{padding:5,color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>LOGIN</Text>
+                <Text style={{color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>LOGIN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress = {()=>{
@@ -23,8 +23,9 @@ export default function landing_page({navigation}){
                 }}
 
                 style={styles.button1}>
-                <Text style={{padding:5,color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>SIGN UP</Text>
+                <Text style={{color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>SIGN UP</Text>
             </TouchableOpacity>
+            </View>
         </View>
         </ImageBackground>
 
@@ -33,7 +34,7 @@ export default function landing_page({navigation}){
 
     const styles = StyleSheet.create({
        container:{
-        justifyContent:"flex-end",
+        justifyContent:"center",
          alignItems:"center",
          flex:1},
 
@@ -44,7 +45,7 @@ export default function landing_page({navigation}){
              color:"white",
              position:"absolute",
              top:80,
-             textAlign:"auto",
+             textAlign:"center",
              
          },
          image:{
@@ -58,6 +59,8 @@ export default function landing_page({navigation}){
               textAlign:"center",
               width:'100%',
               height:70,
+              borderColor:'black',
+             
 
          },
 
@@ -66,6 +69,10 @@ export default function landing_page({navigation}){
               textAlign:"center",
               width:'100%',
               height:70,
+              marginTop:20,
+              borderColor:'black',
+              
+
          },    
 
          background:{
