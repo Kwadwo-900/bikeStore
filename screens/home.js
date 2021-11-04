@@ -4,7 +4,8 @@ import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity} from 'react-n
 export default function Home(){
     return(
         <View>
-            <Text>Welcome to Home</Text>
+            
+            
         </View>
 
     );
