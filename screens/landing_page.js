@@ -8,7 +8,7 @@ export default function landing_page({navigation}){
         <ImageBackground style={styles.background} source={{uri:"https://images.unsplash.com/photo-1495570042983-249df576ad3c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmludGFnZSUyMGJpY3ljbGVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}}>
         <View style={styles.container}>
         <Text style={styles.text}>WELCOME TO THE VINTAGE BIKE SHOP</Text>
-           <View style={{flexDirection:'column'}}>
+           <View style={{flexDirection:'row'}}>
             <TouchableOpacity
                 onPress = {()=>{
                     navigation.navigate("Login")
