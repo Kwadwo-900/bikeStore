@@ -35,7 +35,7 @@ export default function landing_page({navigation}){
     const styles = StyleSheet.create({
        container:{
         justifyContent:"center",
-         alignItems:"center",
+         alignItems:"flex-end",
          flex:1},
 
          text:{
@@ -60,6 +60,7 @@ export default function landing_page({navigation}){
               width:'100%',
               height:70,
               borderColor:'black',
+              boxShadow:"1px 2px 3px #888888",
              
 
          },
@@ -71,6 +72,7 @@ export default function landing_page({navigation}){
               height:70,
               marginTop:20,
               borderColor:'black',
+              boxShadow:"1px 2px 3px #888888",
               
 
          },    
