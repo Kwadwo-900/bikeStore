@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View ,Image,TextInput,TouchableOpacity, ImageBackground} from 'react-native';
 import { AntDesign } from "@expo/vector-icons";
 
 
 export default function Login({navigation}) {
     return (
+      <ImageBackground style={styles.background} source={require("../assets/cool-background.svg")}>
       <View style={{
-        backgroundColor: "#9f5d31",
         flex: 1,
         paddingHorizontal: 20,
         justifyContent: "center",
@@ -19,10 +19,10 @@ export default function Login({navigation}) {
           <Text style={styles.text}>Sign in to continue</Text>
           <AntDesign name="down" size={24} color="black" />
           
-
+<Text style={{marginTop:'5px', fontSize:'12px',fontDecoration:'bold'}}>e-mail</Text>
 <TextInput 
  style={{ paddingHorizontal: 60, borderWidth : 0.5, padding:10,borderRadius:10, paddingTop:10}} placeholder="Enter username or email"/>
- <Text>     </Text>
+ <Text style={{marginTop:'5px', fontSize:'12px',fontDecoration:'bold'}}>password</Text>
 
  <TextInput 
  style={{ paddingHorizontal: 60, borderWidth : 0.5, padding:10,borderRadius:10, }} placeholder="password"/>
@@ -31,13 +31,14 @@ export default function Login({navigation}) {
       navigation.navigate("Home");
     }}
     
-   style={{backgroundColor:"#13b075", border:1, padding:5,marginTop:3,paddingHorizontal:40,
+   style={{backgroundColor:"#fcfa17", border:1, padding:5,marginTop:3,paddingHorizontal:40,
       borderRadius:5, boxShadow:"1px 2px 3px #888888"
    ,}}>
  
    <Text style={{padding:10,color:"black"}}>Login</Text>
  </TouchableOpacity>
  </View>
+ </ImageBackground>
     );
   }
 
@@ -55,6 +56,9 @@ export default function Login({navigation}) {
       width: 200,
       height: 200,
     },
+     background:{
+             flex:1,  
+         }
 
   })
 
