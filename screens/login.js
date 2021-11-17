@@ -6,12 +6,16 @@ import { AntDesign } from "@expo/vector-icons";
 export default function Login({navigation}) {
     return (
       <View style={{
-        backgroundColor: "#dfddfd",
+        backgroundColor: "#9f5d31",
         flex: 1,
         paddingHorizontal: 20,
         justifyContent: "center",
         alignItems: "center"}}>
-          <Image src={{uri:"https://dynamic.brandcrowd.com/preview/logodraft/a694fe0f-4bea-48a2-8f1a-61c813b8390f/image/large.png"}}/>
+          <View>
+        {/*}  <Image style={styles.image} source={{uri:"https://images.unsplash.com/photo-1530067588105-5efd710ccd79?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dmludGFnZSUyMGJ5Y3ljbGVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}} />*/}
+          <Image style={styles.image} source={require("../assets/icons/large.png")} />
+          </View>
+
           <Text style={styles.text}>Sign in to continue</Text>
           <AntDesign name="down" size={24} color="black" />
           
@@ -45,7 +49,13 @@ export default function Login({navigation}) {
       fontWeight:"bold",
 
 
-    }
+    },
+    image:{
+      borderRadius: 20,
+      width: 200,
+      height: 200,
+    },
+
   })
 
   
