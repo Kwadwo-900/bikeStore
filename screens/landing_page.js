@@ -8,14 +8,14 @@ export default function landing_page({navigation}){
         <ImageBackground style={styles.background} source={{uri:"https://images.unsplash.com/photo-1495570042983-249df576ad3c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmludGFnZSUyMGJpY3ljbGVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}}>
         <View style={styles.container}>
         <Text style={styles.text}>WELCOME TO THE VINTAGE BIKE SHOP</Text>
-           <View style={{flexDirection:'row'}}>
+           <View style={{flexDirection:'column'}}>
             <TouchableOpacity
                 onPress = {()=>{
                     navigation.navigate("Login")
                 }}
 
                 style={styles.button}>
-                <Text style={{color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>LOGIN</Text>
+                <Text style={{color:"black",fontSize:12,fontWeight:'bold',paddingTop:10}}>LOGIN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress = {()=>{
@@ -23,7 +23,7 @@ export default function landing_page({navigation}){
                 }}
 
                 style={styles.button1}>
-                <Text style={{color:"black",fontSize:'20px',fontWeight:'bold',paddingTop:10}}>SIGN UP</Text>
+                <Text style={{color:"black",fontSize:12,fontWeight:'bold',paddingTop:10}}>SIGN UP</Text>
             </TouchableOpacity>
             </View>
         </View>
@@ -35,12 +35,12 @@ export default function landing_page({navigation}){
     const styles = StyleSheet.create({
        container:{
         justifyContent:"center",
-         alignItems:"flex-end",
+         alignItems:"center",
          flex:1},
 
          text:{
              fontWeight:"bold",
-             fontSize: 40,
+             fontSize: 20,
              fontFamily:"cursive",
              color:"white",
              position:"absolute",
@@ -57,10 +57,10 @@ export default function landing_page({navigation}){
          button:{
             backgroundColor:"tomato",
               textAlign:"center",
-              width:'100%',
-              height:70,
+              width:100,
+              height:30,
               borderColor:'black',
-              boxShadow:"1px 2px 3px #888888",
+              borderRadius:5,
              
 
          },
@@ -68,11 +68,12 @@ export default function landing_page({navigation}){
          button1:{
             backgroundColor:"#13b075",
               textAlign:"center",
-              width:'100%',
-              height:70,
+              width:100,
+              height:30,
               marginTop:20,
               borderColor:'black',
-              boxShadow:"1px 2px 3px #888888",
+              borderRadius:5,
+           
               
 
          },    

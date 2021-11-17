@@ -11,6 +11,7 @@ export default function Login({navigation}) {
         paddingHorizontal: 20,
         justifyContent: "center",
         alignItems: "center"}}>
+          <Image src={{uri:"https://dynamic.brandcrowd.com/preview/logodraft/a694fe0f-4bea-48a2-8f1a-61c813b8390f/image/large.png"}}/>
           <Text style={styles.text}>Sign in to continue</Text>
           <AntDesign name="down" size={24} color="black" />
           
