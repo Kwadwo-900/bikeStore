@@ -19,7 +19,9 @@ export default function Home({navigation}){
             
 
             <View style={styles.item}>
-                <Text>Item 2</Text>
+                <Image style={styles.img} source={{uri:"https://images.unsplash.com/photo-1523740856324-f2ce89135981?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1526&q=80"}} />
+
+                <Text>Yellow Bike</Text>
             </View>
 
 
@@ -28,7 +30,7 @@ export default function Home({navigation}){
 
         </View>
 
-    );
+    );  
 
 }
 
@@ -46,20 +48,19 @@ const styles = StyleSheet.create({
         textAlign:'center',
     },
     item:{
-        borderTopLeftRadius:10,
-        borderBottomLeftRadius:10,
-        borderBottomRightRadius:10,
-        marginRight:24,
-        paddingLeft:24,
-        paddingBottom:12,
-        backgroundColor:'#faaf',
-        flexDirection:'row',
-        marginTop:10,
+        color: 'rgba(0,0,0, .5)',
+        backgroundColor: '#e3e3e3',
+        borderRadius: 5,
+        paddingVertical: 5,
+        paddingHorizontal: '1rem',
+        marginHorizontal: 7,
+        fontWeight: 500,
+        flexDirection:'row', 
     },
     img:{
         
         height:80,
-        width:'50%',
+        width:80,
     }
 
 })
